@@ -10,7 +10,10 @@
     </p>
     <div class="mt-4">
       <div id="qr-container" data-token="<?=$qr->Code?>"></div>
-      <!-- <img src="<?=base_url('assets/')?>ill/time.svg" alt="girl-doing-yoga-light" width="300" class="img-fluid"/> -->
+      <a href="<?= base_url('index.php/admin/cetakQR/').$data->EventID ?>" class="btn btn-primary">
+        <i class="bx bx-download"></i>
+        <span>Download PDF</span>
+      </a>
     </div>
   </div>
 </div>

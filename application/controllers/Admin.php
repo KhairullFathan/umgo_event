@@ -227,6 +227,21 @@ class Admin extends MY_Controller {
     $page = 'admin/event/hasil-presensi-cetak';
     $this->load->view($page,$data);
   }
+  public function cetakQR($EventID){
+    $startEvent = $this->isStart($EventID);
+    if(!$startEvent){
+      $page = 'admin/event/qr-none';
+      $this->renderAdmin($page,$data);
+    }
+    $data = [
+      'judul'=> 'Cetak QR Presensi',
+      'mactive'=> 'Event',
+      'event'=> $this->mevent->getOne(['event.EventID'=>$EventID]),
+      'start'=> 0,
+    ];
+    $page = 'admin/event/qr-event-cetak';
+    $this->load->view($page,$data);
+  }
 
 
 
