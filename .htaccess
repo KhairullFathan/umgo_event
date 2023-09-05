@@ -1,0 +1,20 @@
+#AddHandler application/x-httpd-php74 .php
+#<IfModule mod_suphp.c>
+#    suPHP_ConfigPath /opt/php74/lib
+#</IfModule>
+
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+#php_value upload_max_filesize 128M
+#php_value post_max_size 128M
+#php_value max_execution_time 300
+#php_value max_input_time 300
+
+#php_flag display_errors off
+
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

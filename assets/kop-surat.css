@@ -1,0 +1,33 @@
+#kop{
+ width: 100%;
+}
+#kop table {
+  width: 100%;
+}
+
+/* logo kop */
+#kop table td.logo img{
+  width: 2.3cm;
+  height: 2.3cm;
+}
+#kop table td.header div.header-content h1{
+  font-size: 1.5rem;
+  line-height: .8rem;
+}
+#kop table td.header div.header-lokasi{
+  text-align: center;
+  font-style: italic;
+  font-size: .9rem;
+}
+.hr1{
+  border: none;
+	border-bottom: 2.5px solid #0000FF;
+	height:0px;
+  margin: 0 auto 1px;
+}
+.hr2{
+  border: none;
+	border-bottom: 5px solid #0000FF;
+	height:0px;
+  margin: 0 auto 1px;
+}
